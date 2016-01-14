@@ -1,0 +1,108 @@
+﻿<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-Frame-Options" content="deny" />
+    <meta name="description" content="Rahul Rai's GitHub Page">
+    <meta name="keywords" content="rahulrai, rahul rai, rahul">
+    <meta name="author" content="Rahul Rai">
+    <title>Rahul Rai</title>
+    <!--Add Resources-->
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/FeedEk.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/msNav.js"></script>
+    <script type="text/javascript" src="scripts/FeedEk.js"></script>
+</head>
+<body>
+    <!-- Nav Bar container -->
+    <ul id="nav" class="scroller-nav"></ul>
+    <!-- Page Elements -->
+    <div id="firstDiv">
+        <h1 style="padding-top: 100px;">Hi, I am Rahul</h1>
+        <div align="left" style="padding-top: 30px; padding-left: 20px; padding-right: 200px;">
+            <h4>I Am An Architect...</h4>
+            <h4>I help design and build beautiful applications that scale. I &hearts; cloud and cutting edge technologies. I code, write, speak and learn all the time.</h4>
+            <br />
+            <br />
+            <div align="right">
+                <h4>read more...</h4>
+            </div>
+        </div>
+    </div>
+    <div class="parallex first-parallex"></div>
+    <div id="secondDiv" style="padding-top: 30px; padding-left: 20px; padding-right: 200px;">
+        <h3>My Blog</h3>
+        <h4>
+            I regularly write at <a href="http://rahulrai.in" target="blank">rahulrai.in</a>. You may want to subscribe to that! This is what I wrote recently!
+        </h4>
+        <br />
+        <div id="divRss"></div>
+        <br />
+        <br />
+        <div align="right">
+            <h4>read more...</h4>
+        </div>
+    </div>
+    <div class="parallex second-parallex"></div>
+    <div id="lastDiv" style="padding-top: 30px; padding-left: 20px; padding-right: 200px;">
+        <h3>Connect</h3>
+        <br />
+        <br />
+        <br />
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-3 col-xs-6 first-box">
+                    <h4><span class="glyphicon glyphicon-earphone"></span></h4>
+                    <h4>Skype</h4>
+                    <p>rahul.rai1986</p><br>
+                </div>
+                <div class="col-sm-3 col-xs-6 second-box">
+                    <h4><span class="glyphicon glyphicon-user"></span></h4>
+                    <h4>Linked In</h4>
+                    <p>linkedin.com/in/rahulrahul</p><br>
+                </div>
+                <div class="col-sm-3 col-xs-6 third-box">
+                    <h4><span class="glyphicon glyphicon-send"></span></h4>
+                    <h4>E-mail</h4>
+                    <p>rahulrai@rahulrai.in</p><br>
+                </div>
+                <div class="col-sm-3 col-xs-6 fourth-box">
+                    <h4><span class="glyphicon glyphicon-leaf"></span></h4>
+                    <h4>Web</h4>
+                    <p>rahulrai.in</p><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Apply MSNAV PLUGIN -->
+    <script type="text/javascript">
+        (function($) {
+            $(document).MSNAV({
+                // the elements than we need to applay the nav plugin on it
+                elements: ["#firstDiv", "#secondDiv", "#lastDiv"],
+                // optional just required in case you have a parallex sections with background image and you need to animate this image with scrolling
+                parallex: [".first-parallex", ".second-parallex"],
+                // the element that will wrap the bullets
+                nav: $('#nav'),
+                // the active class name
+                currentClass: "current",
+                // the scrolling speed
+                scrollSpeed: 750
+            });
+          $('#divRss').FeedEk({
+                FeedUrl:'http://rahulrai.in/Blog/Rss/0',
+                MaxCount : 5,
+                ShowDesc : true,
+                ShowPubDate:false,
+                TitleLinkTarget:'_blank'
+            });
+        }(jQuery));
+    </script>
+</body>
+</html>

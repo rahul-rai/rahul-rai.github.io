@@ -123,6 +123,11 @@ h1 {
     font: 9em 'Oleo Script', Helvetica, sans-serif;
 }
 
+h2 {
+    font: 8em 'Oleo Script', Helvetica, sans-serif;
+}
+
+
 h3 {
     font: 7em 'Great Vibes', Helvetica, sans-serif;
 }
@@ -149,4 +154,14 @@ h4 {
 .fourth-box {
     padding: 10px;
     background: #6CC;
+}
+
+.profile-userpic img {
+    float: none;
+    vertical-align: bottom;
+    border-color: #ffffff;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    border-radius: 50% !important;
 }
